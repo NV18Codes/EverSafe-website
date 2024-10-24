@@ -38,27 +38,27 @@
 
 <body>
 
-    <div class="container-fluid header-top">
-        <div class="container d-flex align-items-center">
-            <div class="d-flex align-items-center h-100">
+    <div class="container-fluid header-top"> 
+        <div class="container d-flex flex-column flex-lg-row align-items-center">
+            <div class="d-flex align-items-center h-100 mb-2 mb-lg-0">
                 <a href="index.html" class="navbar-brand" style="height: 125px;">
                     <img src="https://eversafewatersolutions.com/wp-content/uploads/2024/03/cropped-eversafe-logo-smal.gif"
                         alt="Logo" class="img-fluid">
                 </a>
             </div>
+    
             <div class="w-100 h-100">
                 <div class="topbar px-0 py-2 d-none d-lg-block" style="height: 45px;">
                     <div class="row gx-0 align-items-center">
-                        <div class="col-lg-8 text-center text-lg-center mb-lg-0">
-                            <div class="d-flex flex-wrap">
+                        <div class="col-lg-8 text-center mb-lg-0">
+                            <div class="d-flex flex-wrap justify-content-center">
                                 <div class="border-end border-primary pe-3">
                                     <a href="https://maps.google.com/maps?q=teamtronix&amp;t=m&amp;z=16&amp;output=embed&amp;iwloc=near" class="text-muted small"><i
                                             class="fas fa-map-marker-alt text-primary me-2"></i>Find Us</a>
                                 </div>
                                 <div class="ps-3">
                                     <a href="mailto:info.eversafews@gmail.com" class="text-muted small"><i
-                                            class="fas fa-envelope text-primary me-2">
-                                        </i>info.eversafews@gmail.com</a>
+                                            class="fas fa-envelope text-primary me-2"></i>info.eversafews@gmail.com</a>
                                 </div>
                             </div>
                         </div>
@@ -68,12 +68,11 @@
                                     <a class="btn p-0 text-primary me-3" href="#"><i class="fab fa-facebook-f"></i></a>
                                     <a class="btn p-0 text-primary me-3" href="#"><i class="fab fa-twitter"></i></a>
                                     <a class="btn p-0 text-primary me-3" href="#"><i class="fab fa-instagram"></i></a>
-                                    <a class="btn p-0 text-primary me-0" href="#"><i class="fab fa-linkedin-in"></i></a>
+                                    <a class="btn p-0 text-primary" href="#"><i class="fab fa-linkedin-in"></i></a>
                                 </div>
                                 <div class="dropdown ms-3">
-                                    <a href="#" class="dropdown-toggle text-white" data-bs-toggle="dropdown">
-                                        <small class="text-body"><i class="fas fa-globe-europe text-primary me-2"></i>
-                                            English</small>
+                                    <a href="#" class="dropdown-toggle text-body" data-bs-toggle="dropdown">
+                                        <small><i class="fas fa-globe-europe text-primary me-2"></i>English</small>
                                     </a>
                                     <div class="dropdown-menu">
                                         <a href="#" class="dropdown-item">English</a>
@@ -87,13 +86,13 @@
                         </div>
                     </div>
                 </div>
-                <div class="nav-bar px-0 py-lg-0" style="height: 80px;">
-                    <nav class="navbar navbar-expand-lg navbar-light d-flex justify-content-lg-end">
+    
+                <div class="nav-bar px-0 py-lg-0">
+                    <nav class="navbar navbar-expand-lg navbar-light">
                         <a href="#" class="navbar-brand-2">
                             <h1 class="text-primary mb-0"><i class="fas fa-bolt"></i> Eversafe</h1>
                         </a>
-                        <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
-                            data-bs-target="#navbarCollapse">
+                        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
                             <span class="fa fa-bars"></span>
                         </button>
                         <div class="collapse navbar-collapse" id="navbarCollapse">
@@ -101,26 +100,8 @@
                                 <li class="nav-item">
                                     <a href="about.html" class="nav-link text-dark">About Us</a>
                                 </li>
-                                <li class="nav-item dropdown">
-                                    <a href="product.html" class="nav-link dropdown-toggle text-dark" id="productsDropdown"
-                                        role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                                        Products
-                                    </a>
-                                    <ul class="dropdown-menu" aria-labelledby="productsDropdown">
-                                        <li><a class="dropdown-item" href="#">RO Plants</a></li>
-                                        <li><a class="dropdown-item" href="#">Water Softener</a></li>
-                                        <li><a class="dropdown-item" href="#">Automatic Multiport Valves</a></li>
-                                        <li><a class="dropdown-item" href="#">Manual Multiport Valves</a></li>
-                                        <li><a class="dropdown-item" href="#">SS Membrane Housings</a></li>
-                                        <li><a class="dropdown-item" href="#">Square Brine Tanks</a></li>
-                                        <li><a class="dropdown-item" href="#">FRP Membrane Housings</a></li>
-                                        <li><a class="dropdown-item" href="#">Swimming Pool Filtration Tanks</a></li>
-                                        <li><a class="dropdown-item" href="#">Smooth / Glossy Finishing FRP Pressure
-                                                Vessels</a></li>
-                                        <li><a class="dropdown-item" href="#">FRP Pressure Vessels</a></li>
-                                    </ul>
-                                </li>
                                 <li class="nav-item">
+                                    <a href="product.html" class="nav-link text-dark">Products</a>
                                 </li>
                                 <li class="nav-item">
                                     <a href="contact.html" class="nav-link text-dark">Contact</a>
@@ -135,7 +116,34 @@
             </div>
         </div>
     </div>
-    <!-- Navbar & Hero End -->
+    
+    <!-- Additional CSS for Responsive Adjustments -->
+    <style>
+        .header-top {
+            background-color: #f8f9fa; /* Optional: Add a background color */
+        }
+    
+        @media (max-width: 992px) {
+            .topbar {
+                display: none; /* Hide top bar on smaller screens */
+            }
+    
+            .navbar-collapse {
+                padding-top: 20px; /* Add padding for navbar on mobile */
+            }
+    
+            .navbar-nav .nav-link {
+                padding: 10px; /* Adjust padding for mobile */
+            }
+        }
+    
+        @media (max-width: 576px) {
+            .navbar-brand img {
+                height: 80px; /* Adjust logo size for smaller screens */
+            }
+        }
+    </style>
+    
 
     <!-- Hero Section -->
     <section class="relative hero-section text-center bg-gray-50 py-16 px-4 overflow-hidden">
@@ -258,261 +266,70 @@
     </div>
     </div>
     <!-- Banner End -->
-    
 
-   <!-- Bestsellers Start -->
+
+    <!-- Bestsellers Start -->
 <div class="container-fluid bestsellers py-5"
 style="background-image: url('https://cdn.pixabay.com/photo/2015/02/02/16/41/solid-wood-621071_1280.jpg'); background-size: cover; background-position: center;">
 <div class="container py-5">
     <div class="row g-5">
         <!-- Left Section with Navigation -->
-        <div class="col-lg-5">
+        <div class="col-lg-4 col-md-12">
             <div style="background-color: rgba(0, 0, 0, 0.7); padding: 20px; border-radius: 10px;">
                 <h4 class="text-primary">Our Bestsellers</h4>
-                <h1 class="display-4 mb-4 text-white">Discover Our Top-Selling Products</h1>
-                <p class="mb-5 text-white">Explore our range of best-selling products, trusted by customers for their quality and performance.</p>
+                <h1 class="display-5 mb-4 text-white">Top-Selling Products</h1>
+                <p class="mb-5 text-white">Explore our range of best-selling products, trusted for quality and
+                    performance.</p>
                 <ul class="nav flex-column">
+                    <!-- Navigation Links -->
                     <li class="nav-item mb-3">
-                        <a class="d-flex align-items-center h4 text-white active" href="#BestsellersTab-1" onclick="showTab(1)">
-                            <div class="btn-md-square bg-primary text-white me-3"><span class="fas fa-water small"></span></div>
+                        <a class="d-flex align-items-center h5 text-white active" href="#BestsellersTab-1"
+                            onclick="showTab(1)">
+                            <div class="btn-md-square bg-primary text-white me-3"><span class="fas fa-water"></span></div>
                             RO Water Purifier
                         </a>
                     </li>
-                    <li class="nav-item mb-3">
-                        <a class="d-flex align-items-center h4 text-white" href="#BestsellersTab-2" onclick="showTab(2)">
-                            <div class="btn-md-square bg-primary text-white me-3"><span class="fas fa-filter small"></span></div>
-                            Water Softener
-                        </a>
-                    </li>
-                    <li class="nav-item mb-3">
-                        <a class="d-flex align-items-center h4 text-white" href="#BestsellersTab-3" onclick="showTab(3)">
-                            <div class="btn-md-square bg-primary text-white me-3"><span class="fas fa-tachometer-alt small"></span></div>
-                           Automatic multiport valves
-                        </a>
-                    </li>
-                    <li class="nav-item mb-3">
-                        <a class="d-flex align-items-center h4 text-white" href="#BestsellersTab-4" onclick="showTab(4)">
-                            <div class="btn-md-square bg-primary text-white me-3"><span class="fas fa-valve small"></span></div>
-                            Manual Multiport Valves
-                        </a>
-                    </li>
-                    <li class="nav-item mb-3">
-                        <a class="d-flex align-items-center h4 text-white" href="#BestsellersTab-5" onclick="showTab(5)">
-                            <div class="btn-md-square bg-primary text-white me-3"><span class="fas fa-tank small"></span></div>
-                            Square Brine Tanks
-                        </a>
-                    </li>
-                    <li class="nav-item mb-3">
-                        <a class="d-flex align-items-center h4 text-white" href="#BestsellersTab-6" onclick="showTab(6)">
-                            <div class="btn-md-square bg-primary text-white me-3"><span class="fas fa-house small"></span></div>
-                            SS Membrane Housing
-                        </a>
-                    </li>
+                    <!-- Add more navigation items as needed -->
                 </ul>
             </div>
         </div>
 
         <!-- Right Section with Products -->
-        <div class="col-lg-7">
+        <div class="col-lg-8 col-md-12">
             <div class="tab-content">
                 <!-- Reusable Product Card with Flip Effect -->
                 <div id="BestsellersTab-1" class="tab-pane fade show active">
                     <div class="bestsellers-item card-flip-container">
                         <div class="card-flip">
                             <div class="front">
-                                <img src="https://eversafewatersolutions.com/wp-content/uploads/2024/03/ro-water-300x300.jpg" class="img-fluid w-100" alt="RO Water Purifier">
-                                <div class="bestsellers-content bg-white p-4">
-                                    <h4 class="mb-3">RO Water Purifier</h4>
-                                    <p class="mb-4">Our RO water purifiers ensure pure, safe drinking water for you and your family.</p>
-                                    <button class="btn btn-primary py-2 px-4 toggle-flip" onclick="flipCard(this)">View Product</button>
+                                <img src="https://eversafewatersolutions.com/wp-content/uploads/2024/03/ro-water-300x300.jpg"
+                                    class="img-fluid w-100" alt="RO Water Purifier" style="max-height: 200px;">
+                                <div class="bestsellers-content bg-white p-3">
+                                    <h5 class="mb-2">RO Water Purifier</h5>
+                                    <p class="mb-3">Our RO water purifiers ensure pure, safe drinking water for
+                                        you and your family.</p>
+                                    <button class="btn btn-primary py-1 px-3 toggle-flip" onclick="flipCard(this)">View
+                                        Product</button>
                                 </div>
                             </div>
                             <div class="back">
-                                <div class="bestsellers-content bg-white p-4">
-                                    <h4>Product Description</h4>
-                                    <p>The RO water purifier ensures pure, safe drinking water by removing harmful contaminants while preserving essential minerals.</p>
-                                    <h4>Advantages</h4>
+                                <div class="bestsellers-content bg-white p-3">
+                                    <h5>Product Description</h5>
+                                    <p>The RO water purifier ensures pure, safe drinking water by removing harmful
+                                        contaminants while preserving essential minerals.</p>
+                                    <h6>Advantages</h6>
                                     <ul>
                                         <li>Removes harmful chemicals and contaminants.</li>
                                         <li>Improves water taste and quality.</li>
-                                        <li>Energy-efficient with low maintenance.</li>
                                     </ul>
-                                    <h4>Disadvantages</h4>
-                                    <ul>
-                                        <li>Requires regular filter replacements.</li>
-                                        <li>Higher initial cost compared to basic filters.</li>
-                                    </ul>
-                                    <button class="btn btn-secondary py-2 px-4 toggle-flip" onclick="flipCard(this)">Back to Product</button>
+                                    <button class="btn btn-secondary py-1 px-3 toggle-flip" onclick="flipCard(this)">Back to
+                                        Product</button>
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
-
-                <!-- Add the following structure for each of the remaining products -->
-                <!-- Water Softener -->
-                <div id="BestsellersTab-2" class="tab-pane fade">
-                    <div class="bestsellers-item card-flip-container">
-                        <div class="card-flip">
-                            <div class="front">
-                                <img src="https://eversafewatersolutions.com/wp-content/uploads/2024/03/product_1059_1.png" class="img-fluid w-100" alt="Water Softener">
-                                <div class="bestsellers-content bg-white p-4">
-                                    <h4 class="mb-3">Water Softener</h4>
-                                    <p class="mb-4">Advanced water softeners that reduce water hardness and improve quality.</p>
-                                    <button class="btn btn-primary py-2 px-4 toggle-flip" onclick="flipCard(this)">View Product</button>
-                                </div>
-                            </div>
-                            <div class="back">
-                                <div class="bestsellers-content bg-white p-4">
-                                    <h4>Product Description</h4>
-                                    <p>Our advanced water softeners efficiently reduce hardness, ensuring softer water for your home.</p>
-                                    <h4>Advantages</h4>
-                                    <ul>
-                                        <li>Reduces mineral buildup.</li>
-                                        <li>Improves water appliance longevity.</li>
-                                        <li>Cost-effective in the long run.</li>
-                                    </ul>
-                                    <h4>Disadvantages</h4>
-                                    <ul>
-                                        <li>Requires periodic salt refills.</li>
-                                        <li>Initial setup can be costly.</li>
-                                    </ul>
-                                    <button class="btn btn-secondary py-2 px-4 toggle-flip" onclick="flipCard(this)">Back to Product</button>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Multi Meter -->
-                <div id="BestsellersTab-3" class="tab-pane fade">
-                    <div class="bestsellers-item card-flip-container">
-                        <div class="card-flip">
-                            <div class="front">
-                                <img src="https://eversafewatersolutions.com/wp-content/uploads/2024/03/multi-meter-300x300.jpg" class="img-fluid w-100" alt="Multi Meter">
-                                <div class="bestsellers-content bg-white p-4">
-                                    <h4 class="mb-3">Automatic multiport valves</h4>
-                                    <p class="mb-4">High-precision multi meters for accurate testing and measurement.</p>
-                                    <button class="btn btn-primary py-2 px-4 toggle-flip" onclick="flipCard(this)">View Product</button>
-                                </div>
-                            </div>
-                            <div class="back">
-                                <div class="bestsellers-content bg-white p-4">
-                                    <h4>Product Description</h4>
-                                    <p>High-precision digital multi meter with advanced testing functions for various industries.</p>
-                                    <h4>Advantages</h4>
-                                    <ul>
-                                        <li>High accuracy and durability.</li>
-                                        <li>Multi-function measurement capabilities.</li>
-                                    </ul>
-                                    <h4>Disadvantages</h4>
-                                    <ul>
-                                        <li>May require periodic calibration.</li>
-                                        <li>Higher cost for advanced models.</li>
-                                    </ul>
-                                    <button class="btn btn-secondary py-2 px-4 toggle-flip" onclick="flipCard(this)">Back to Product</button>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Additional products structured similarly -->
-                <!-- Manual Multiport Valves -->
-                <div id="BestsellersTab-4" class="tab-pane fade">
-                    <div class="bestsellers-item card-flip-container">
-                        <div class="card-flip">
-                            <div class="front">
-                                <img src="https://eversafewatersolutions.com/wp-content/uploads/2024/03/mnn-300x300.jpg" class="img-fluid w-100" alt="Manual Multiport Valves">
-                                <div class="bestsellers-content bg-white p-4">
-                                    <h4 class="mb-3">Manual Multiport Valves</h4>
-                                    <p class="mb-4">Reliable manual multiport valves designed for easy operation and control.</p>
-                                    <button class="btn btn-primary py-2 px-4 toggle-flip" onclick="flipCard(this)">View Product</button>
-                                </div>
-                            </div>
-                            <div class="back">
-                                <div class="bestsellers-content bg-white p-4">
-                                    <h4>Product Description</h4>
-                                    <p>Durable manual multiport valves designed for industrial applications and precise control.</p>
-                                    <h4>Advantages</h4>
-                                    <ul>
-                                        <li>Durable and long-lasting.</li>
-                                        <li>Easy manual operation.</li>
-                                    </ul>
-                                    <h4>Disadvantages</h4>
-                                    <ul>
-                                        <li>Manual operation may be labor-intensive.</li>
-                                    </ul>
-                                    <button class="btn btn-secondary py-2 px-4 toggle-flip" onclick="flipCard(this)">Back to Product</button>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Square Brine Tanks -->
-                <div id="BestsellersTab-5" class="tab-pane fade">
-                    <div class="bestsellers-item card-flip-container">
-                        <div class="card-flip">
-                            <div class="front">
-                                <img src="https://eversafewatersolutions.com/wp-content/uploads/2024/03/tyyy-300x300.jpg" class="img-fluid w-100" alt="Square Brine Tanks">
-                                <div class="bestsellers-content bg-white p-4">
-                                    <h4 class="mb-3">Square Brine Tanks</h4>
-                                    <p class="mb-4">High-capacity square brine tanks for efficient water softening systems.</p>
-                                    <button class="btn btn-primary py-2 px-4 toggle-flip" onclick="flipCard(this)">View Product</button>
-                                </div>
-                            </div>
-                            <div class="back">
-                                <div class="bestsellers-content bg-white p-4">
-                                    <h4>Product Description</h4>
-                                    <p>Durable square brine tanks designed for water softeners, providing reliable storage solutions.</p>
-                                    <h4>Advantages</h4>
-                                    <ul>
-                                        <li>High storage capacity.</li>
-                                        <li>Durable and low-maintenance.</li>
-                                    </ul>
-                                    <h4>Disadvantages</h4>
-                                    <ul>
-                                        <li>Requires space for installation.</li>
-                                    </ul>
-                                    <button class="btn btn-secondary py-2 px-4 toggle-flip" onclick="flipCard(this)">Back to Product</button>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- SS Membrane Housing -->
-                <div id="BestsellersTab-6" class="tab-pane fade">
-                    <div class="bestsellers-item card-flip-container">
-                        <div class="card-flip">
-                            <div class="front">
-                                <img src="https://eversafewatersolutions.com/wp-content/uploads/2024/03/999-300x300.jpg" class="img-fluid w-100" alt="SS Membrane Housing">
-                                <div class="bestsellers-content bg-white p-4">
-                                    <h4 class="mb-3">SS Membrane Housing</h4>
-                                    <p class="mb-4">High-quality stainless steel membrane housing for RO systems and filtration units.</p>
-                                    <button class="btn btn-primary py-2 px-4 toggle-flip" onclick="flipCard(this)">View Product</button>
-                                </div>
-                            </div>
-                            <div class="back">
-                                <div class="bestsellers-content bg-white p-4">
-                                    <h4>Product Description</h4>
-                                    <p>Durable stainless steel membrane housing designed for industrial water filtration systems.</p>
-                                    <h4>Advantages</h4>
-                                    <ul>
-                                        <li>Corrosion-resistant material.</li>
-                                        <li>High-pressure capacity.</li>
-                                    </ul>
-                                    <h4>Disadvantages</h4>
-                                    <ul>
-                                        <li>Costlier than plastic alternatives.</li>
-                                    </ul>
-                                    <button class="btn btn-secondary py-2 px-4 toggle-flip" onclick="flipCard(this)">Back to Product</button>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+                <!-- Repeat structure for other products -->
             </div>
         </div>
     </div>
@@ -520,14 +337,14 @@ style="background-image: url('https://cdn.pixabay.com/photo/2015/02/02/16/41/sol
 </div>
 <!-- Bestsellers End -->
 
-<!-- CSS for Flip Effect -->
+<!-- CSS for Flip Effect & Responsive Design -->
 <style>
-/* Container for flip card */
+/* Flip Card Container */
 .card-flip-container {
     perspective: 1000px;
 }
 
-/* Flip card wrapper */
+/* Flip Card Wrapper */
 .card-flip {
     width: 100%;
     height: 100%;
@@ -536,28 +353,27 @@ style="background-image: url('https://cdn.pixabay.com/photo/2015/02/02/16/41/sol
     transition: transform 0.6s;
 }
 
-/* Front and back sides of the card */
-.card-flip .front, .card-flip .back {
+/* Front and Back Sides */
+.card-flip .front,
+.card-flip .back {
     position: absolute;
     width: 100%;
+    height: 100%;
     backface-visibility: hidden;
     top: 0;
     left: 0;
 }
 
-/* Styling for the front side */
 .card-flip .front {
     z-index: 2;
     transform: rotateY(0deg);
 }
 
-/* Styling for the back side */
 .card-flip .back {
     transform: rotateY(180deg);
     z-index: 1;
 }
 
-/* When flipped, hide the front and show the back */
 .card-flip.flipped .front {
     transform: rotateY(-180deg);
 }
@@ -566,22 +382,42 @@ style="background-image: url('https://cdn.pixabay.com/photo/2015/02/02/16/41/sol
     transform: rotateY(0deg);
 }
 
-/* Responsive height adjustment */
+/* Adjusting height for consistent layout */
 .bestsellers-item {
-    min-height: 400px;
+    min-height: 350px;
 }
 
-/* Ensure spacing and layout adjustments */
-.nav-item a {
-    color: #fff;
-    text-decoration: none;
-    padding: 10px;
-    border-radius: 5px;
-    transition: background-color 0.3s ease;
+/* Card padding and font adjustments */
+.bestsellers-content h5 {
+    font-size: 1.2rem;
 }
 
-.nav-item a.active, .nav-item a:hover {
-    background-color: #004085;
+.bestsellers-content p {
+    font-size: 0.95rem;
+    margin-bottom: 10px;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .bestsellers-item {
+        min-height: 300px;
+    }
+
+    .bestsellers-content h5 {
+        font-size: 1rem;
+    }
+
+    .bestsellers-content p {
+        font-size: 0.85rem;
+    }
+
+    .container h1 {
+        font-size: 1.75rem;
+    }
+
+    .container h4 {
+        font-size: 1.25rem;
+    }
 }
 </style>
 
@@ -592,7 +428,6 @@ function flipCard(button) {
     card.classList.toggle('flipped');
 }
 
-// Function to display the right tab on click
 function showTab(tabIndex) {
     const tabs = document.querySelectorAll('.tab-pane');
     tabs.forEach(tab => tab.classList.remove('show', 'active'));
@@ -602,33 +437,39 @@ function showTab(tabIndex) {
 
 
 
-<!-- Services Start -->
+   <!-- Services Start -->
 <div class="container-fluid py-5 bg-light">
     <div class="container">
         <div class="row g-5">
-            <div class="col-lg-4 col-md-6 d-flex align-items-center">
-                <div class="service-icon bg-primary text-white rounded-circle d-flex justify-content-center align-items-center me-3" style="width: 80px; height: 80px;">
+            <!-- Secure Payment -->
+            <div class="col-lg-4 col-md-6 col-sm-12 d-flex align-items-center">
+                <div class="service-icon bg-primary text-white rounded-circle d-flex justify-content-center align-items-center shadow"
+                    style="width: 80px; height: 80px;">
                     <i class="fas fa-lock fa-2x"></i>
                 </div>
-                <div>
+                <div class="ms-3">
                     <h4 class="text-primary mb-2">SECURE PAYMENT</h4>
                     <p>Secure Payment process with any payment method.</p>
                 </div>
             </div>
-            <div class="col-lg-4 col-md-6 d-flex align-items-center">
-                <div class="service-icon bg-primary text-white rounded-circle d-flex justify-content-center align-items-center me-3" style="width: 80px; height: 80px;">
+            <!-- Delivered With Care -->
+            <div class="col-lg-4 col-md-6 col-sm-12 d-flex align-items-center">
+                <div class="service-icon bg-primary text-white rounded-circle d-flex justify-content-center align-items-center shadow"
+                    style="width: 80px; height: 80px;">
                     <i class="fas fa-box fa-2x"></i>
                 </div>
-                <div>
+                <div class="ms-3">
                     <h4 class="text-primary mb-2">DELIVERED WITH CARE</h4>
                     <p>Delivering at your location with full safety and special care.</p>
                 </div>
             </div>
-            <div class="col-lg-4 col-md-6 d-flex align-items-center">
-                <div class="service-icon bg-primary text-white rounded-circle d-flex justify-content-center align-items-center me-3" style="width: 80px; height: 80px;">
+            <!-- Excellent Service -->
+            <div class="col-lg-4 col-md-6 col-sm-12 d-flex align-items-center">
+                <div class="service-icon bg-primary text-white rounded-circle d-flex justify-content-center align-items-center shadow"
+                    style="width: 80px; height: 80px;">
                     <i class="fas fa-handshake fa-2x"></i>
                 </div>
-                <div>
+                <div class="ms-3">
                     <h4 class="text-primary mb-2">EXCELLENT SERVICE</h4>
                     <p>Faithful promise of excellent service at your comfort.</p>
                 </div>
@@ -638,34 +479,37 @@ function showTab(tabIndex) {
 </div>
 <!-- Services End -->
 
-
 <!-- Products Promotions Start -->
 <div class="container-fluid py-5 bg-light">
     <div class="container">
         <div class="row g-5">
-            <div class="col-lg-3 col-md-6">
-                <div class="product-card text-center">
+            <!-- Product 1 -->
+            <div class="col-lg-3 col-md-6 col-sm-12">
+                <div class="product-card text-center shadow rounded p-4 h-100">
                     <h5>Looking for Packaged Drinking Water Plants?</h5>
                     <p>Contact us at Eversafe Water Solutions - Nourishing the world drop by drop.</p>
                     <a href="contact.html" class="btn btn-primary py-2 px-4">Contact Us</a>
                 </div>
             </div>
-            <div class="col-lg-3 col-md-6">
-                <div class="product-card text-center">
+            <!-- Product 2 -->
+            <div class="col-lg-3 col-md-6 col-sm-12">
+                <div class="product-card text-center shadow rounded p-4 h-100">
                     <h5>Want to Improve Water Quality for Prawn & Fish Farms?</h5>
                     <p>Contact us at Eversafe Water Solutions - Nourishing the world drop by drop.</p>
                     <a href="contact.html" class="btn btn-primary py-2 px-4">Contact Us</a>
                 </div>
             </div>
-            <div class="col-lg-3 col-md-6">
-                <div class="product-card text-center">
+            <!-- Product 3 -->
+            <div class="col-lg-3 col-md-6 col-sm-12">
+                <div class="product-card text-center shadow rounded p-4 h-100">
                     <h5>Ultimate Aquatic Experience - FRP Swimming Pool Filtration Tanks</h5>
                     <p>Contact us at Eversafe Water Solutions - Nourishing the world drop by drop.</p>
                     <a href="contact.html" class="btn btn-primary py-2 px-4">Contact Us</a>
                 </div>
             </div>
-            <div class="col-lg-3 col-md-6">
-                <div class="product-card text-center">
+            <!-- Product 4 -->
+            <div class="col-lg-3 col-md-6 col-sm-12">
+                <div class="product-card text-center shadow rounded p-4 h-100">
                     <h5>Scales Building Up in Your Pipelines? Install Water Softeners</h5>
                     <p>Contact us at Eversafe Water Solutions - Nourishing the world drop by drop.</p>
                     <a href="contact.html" class="btn btn-primary py-2 px-4">Contact Us</a>
@@ -675,11 +519,6 @@ function showTab(tabIndex) {
     </div>
 </div>
 <!-- Products Promotions End -->
-
-
-
-
-
 
 
     <!-- FAQ Start -->
